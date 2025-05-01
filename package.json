@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.11",
+    "next": "14.2.26",
     "@dynamic-labs/sdk-react-core": "*",
     "@dynamic-labs/solana": "*",
     "crypto-browserify": "^3.12.0",
