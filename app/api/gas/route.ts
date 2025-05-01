@@ -10,9 +10,9 @@ import { RPC_URL, USDC_MINT } from "@/consts";
 
 export const dynamic = "force-dynamic";
 
-const PRIVATE_KEY = process.env.FEE_PAYER_PRIVATE_KEY || "";
-
 export async function POST(request: NextRequest) {
+  const PRIVATE_KEY = process.env.FEE_PAYER_PRIVATE_KEY || "";
+
   try {
     const body = await request.json();
     const { senderAddress, recipientAddress, amount } = body;
@@ -23,11 +23,6 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-
-    console.log(process.env);
-
-    console.log("RPC_URL:", RPC_URL);
-    console.log("PRIVATE_KEY:", PRIVATE_KEY);
 
     if (!RPC_URL || !PRIVATE_KEY) {
       return NextResponse.json(
