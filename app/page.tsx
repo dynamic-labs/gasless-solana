@@ -9,8 +9,6 @@ import "./page.css";
 export default function Main() {
   const { isDarkMode } = useDarkMode();
 
-  console.log("isDarkMode", isDarkMode);
-
   return (
     <div className={`container ${isDarkMode ? "dark" : "light"}`}>
       <div className="header">
