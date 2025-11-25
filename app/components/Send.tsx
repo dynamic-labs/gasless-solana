@@ -112,7 +112,6 @@ export default function Send() {
       }
 
       const { serializedTransaction } = responseData;
-      console.log("Serialized transaction:", serializedTransaction);
       const signer = await primaryWallet.getSigner();
 
       setResult("Please sign the transaction...");
