@@ -3,7 +3,6 @@ import { isSolanaWallet } from "@dynamic-labs/solana";
 import { useState, useEffect } from "react";
 import { PublicKey, Transaction, Connection } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
-import bs58 from "bs58";
 import "./Send.css";
 import { RPC_URL, USDC_MINT } from "@/consts";
 
@@ -113,6 +112,7 @@ export default function Send() {
       }
 
       const { serializedTransaction } = responseData;
+      console.log("Serialized transaction:", serializedTransaction);
       const signer = await primaryWallet.getSigner();
 
       setResult("Please sign the transaction...");
@@ -120,7 +120,7 @@ export default function Send() {
       try {
         setResult("Signing transaction...");
         const transaction = Transaction.from(
-          bs58.decode(serializedTransaction)
+          Buffer.from(serializedTransaction, "base64")
         );
 
         const { signature } = await signer.signAndSendTransaction(transaction);
