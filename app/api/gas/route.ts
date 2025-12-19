@@ -98,12 +98,12 @@ export async function POST(request: NextRequest) {
     instructions.forEach((instruction) => transaction.add(instruction));
     transaction.partialSign(feePayer);
 
-    const serializedTransaction = bs58.encode(
+    const serializedTransaction = Buffer.from(
       transaction.serialize({
         requireAllSignatures: false,
         verifySignatures: false,
       })
-    );
+    ).toString("base64");
 
     return NextResponse.json({
       success: true,
