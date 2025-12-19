@@ -10,24 +10,24 @@
   },
   "dependencies": {
     "@dynamic-labs-wallet/node-svm": "^0.0.198",
-    "@dynamic-labs/sdk-react-core": "^4.45.0",
-    "@dynamic-labs/solana": "^4.45.0",
+    "@dynamic-labs/sdk-react-core": "^4.51.0",
+    "@dynamic-labs/solana": "^4.51.0",
     "@solana/spl-token": "^0.4.14",
     "@solana/web3.js": "1.91.6",
     "bs58": "^6.0.0",
     "crypto-browserify": "^3.12.1",
-    "next": "^15.5.6",
+    "next": "^15.5.9",
     "process": "^0.11.10",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "stream-browserify": "^3.0.0"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
-    "@types/node": "^22.19.1",
-    "@types/react": "^19.2.4",
+    "@types/node": "^22.19.3",
+    "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "eslint-config-next": "15.3.1"
   },
   "browser": {
